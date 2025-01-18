@@ -1,63 +1,78 @@
-// Toggle global options
-$enable-shadows: true;
-$enable-negative-margins: true;
+html{
+    font-size: 18px;
+    
+}
 
-// Include functions first
-@import "bootstrap/scss/functions";
+a:active{
+  color: light-dark(var(--light), var(--dark));
+}
 
-// custom fonts
-@import "font";
+.container {
+	max-width: 600px;
+	margin: auto;
+  
+   
+}
 
-// Customize some defaults
-$prefix: "td-";
-$body-color: #040F16;
-$body-bg: #FBFBFF;
-$border-radius: 0.4rem;
-$primary: #B80C09;
-$secondary: #0B4F6C;
-$info: #01BAEF;
-$font-family-sans-serif:
-  LilGrotesk,
-  system-ui,
-  -apple-system,
-  "Segoe UI",
-  Roboto,
-  "Helvetica Neue",
-  "Noto Sans",
-  "Liberation Sans",
-  Arial,
-  sans-serif,
-  "Apple Color Emoji",
-  "Segoe UI Emoji",
-  "Segoe UI Symbol",
-  "Noto Color Emoji";
+.card {
+    display: flex;
+    position: relative;
+    border-width: 1px;
+  }
+  
 
-// Required
-@import "bootstrap/scss/variables";
-@import "bootstrap/scss/variables-dark";
-@import "bootstrap/scss/maps";
-@import "bootstrap/scss/mixins";
-@import "bootstrap/scss/utilities";
-@import "bootstrap/scss/root";
-@import "bootstrap/scss/reboot";
+  .card-line{
+    border-bottom: solid;
+    border-spacing: 0;
+  }
+   
+  .card {
+    display: flex;
+    border-radius: 8px;
+    padding: 40px;
+    border: 1px solid #dfe2e1;
+    position:relative;
+    flex-direction: column;
+  }
 
-@import "bootstrap/scss/type";
-@import "bootstrap/scss/images";
-@import "bootstrap/scss/containers";
-@import "bootstrap/scss/grid";
-@import "bootstrap/scss/images";
-@import "bootstrap/scss/buttons";
-@import "bootstrap/scss/close";
-@import "bootstrap/scss/forms";
-@import "bootstrap/scss/card";
-@import "bootstrap/scss/list-group";
+  img{
+    width: 180px;
+    margin-left: -36px;
+    border-radius: 120px;
+  }
+  
+  .card:hover {
+    border: 1px solid #0aad0a;
+    box-shadow: 1px 5px 12px rgba(0, 0, 0, 0.12);
+  }
+  
+  .card-border{
+    display: flex;    
+    border-radius: 8px;
+    border: 1px solid gray;
+    align-items: center;
+    gap: 20px;
+    padding: 1px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-decoration: none;
+    margin: 0px;
+  }
 
-// Helpers
-@import "bootstrap/scss/helpers";
+  .flex-grow{
+    flex-grow: 1;
+  }
+  
 
-// Custom components
-@import "card";
-@import "link";
+  .card-svg{
+    height: 90px;
+    width: 90px;
+  }
 
-// Utilities
-@import "bootstrap/scss/utilities/api";
+  .card-border:hover{
+    border: 1px solid #0aad0a;
+    box-shadow: 1px 5px 12px rgba(0, 0, 0, 0.12);
+  }
+
+// 
+  

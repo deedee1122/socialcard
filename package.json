@@ -10,7 +10,7 @@
     "css-compile": "sass --style compressed --silence-deprecation=color-functions --silence-deprecation=mixed-decls --silence-deprecation=import --silence-deprecation=global-builtin --source-map --embed-sources --no-error-css --load-path=node_modules --load-path=website scss/:website/css/",
     "css-lint": "stylelint scss/",
     "css-prefix": "postcss --replace website/css/styles.css",
-    "css": "npm-run-all css-compile css-prefix",
+    "css": "npm-run-all css-compile",
     "server": "sirv website --dev --port 3000",
     "start": "npm-run-all --parallel watch server",
     "watch": "nodemon -e html,scss -x \"npm run build\"",
