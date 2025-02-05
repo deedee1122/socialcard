@@ -3,53 +3,87 @@ html{
     
 }
 
-a:active{
-  color: light-dark(var(--light), var(--dark));
+:root{
+  color-scheme: light dark;
+  --light-primary: #04395E;  
+  --light-color: #010814;
+  --light-bg:#62828c;
+
+  --dark-primary:#9A879D;
+  --dark-color: #fff;
+  --dark-bg:#283a58;
 }
+
+
+body{
+  background-color: light-dark(var(--light-bg), var(--dark-bg));
+  color: light-dark(var(--light-color), var(--dark-color));
+}
+
+
+
 
 .container {
 	max-width: 600px;
 	margin: auto;
+    
+  }
+
+
+
+a{
+  color:light-dark(var(--light-primary), var(--dark-primary));
+}
   
-   
+.card-header{
+  background-color: light-dark(var(--light-primary), var(--dark-primary));
+  text-align: center;
+  color: light-dark(var(--light-color), var(--dark-color));
 }
 
-.card {
-    display: flex;
-    position: relative;
-    border-width: 1px;
-  }
+.card-title{
+  text-align: center;
   
+}
 
   .card-line{
-    border-bottom: solid;
     border-spacing: 0;
   }
    
+
+  .card-content{
+    padding: 40px;
+  }
+
   .card {
+    --dark-bg: #000;
+    --light-bg: #fff;
     display: flex;
     border-radius: 8px;
-    padding: 40px;
-    border: 1px solid #dfe2e1;
+    border: 1px solid light-dark(var(--light-primary), var(--dark-primary));
     position:relative;
     flex-direction: column;
+    background-color: light-dark(var(--dark-bg), var(--light-bg));
   }
 
   img{
     width: 180px;
-    margin-left: -36px;
     border-radius: 120px;
-  }
+    margin-bottom: -95px;
+    border-color: light-dark(var(--light-primary), var(--dark-primary));
+    border-width: 3px;
+    border-style: solid;
+ }
   
   .card:hover {
-    border: 1px solid #0aad0a;
+    border: 1px solid light-dark(var(--dark-primary), var(--light-primary));
     box-shadow: 1px 5px 12px rgba(0, 0, 0, 0.12);
   }
   
   .card-border{
     display: flex;    
     border-radius: 8px;
-    border: 1px solid gray;
+    border: 1px solid light-dark(var(--light-primary), var(--dark-primary));
     align-items: center;
     gap: 20px;
     padding: 1px;
@@ -70,9 +104,13 @@ a:active{
   }
 
   .card-border:hover{
-    border: 1px solid #0aad0a;
+    border: 1px solid light-dark(var(--light-primary), var(--dark-primary));
     box-shadow: 1px 5px 12px rgba(0, 0, 0, 0.12);
   }
 
-// 
+
+  .changing-theme{
+    margin: 20px;
+    padding: 10px;
+  }
   
