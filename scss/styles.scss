@@ -5,13 +5,13 @@ html{
 
 :root{
   color-scheme: light dark;
-  --light-primary: #04395E;  
-  --light-color: #010814;
+  --light-primary: #074a79;  
+  --light-color: #02122f;
   --light-bg:#62828c;
 
-  --dark-primary:#9A879D;
+  --dark-primary:#26042e;
   --dark-color: #fff;
-  --dark-bg:#283a58;
+  --dark-bg:#5e6a7e;
 }
 
 
@@ -84,6 +84,7 @@ a{
     display: flex;    
     border-radius: 8px;
     border: 1px solid light-dark(var(--light-primary), var(--dark-primary));
+    box-shadow: 1px 5px 12px rgba(0, 0, 0, 0.12);
     align-items: center;
     gap: 20px;
     padding: 1px;
